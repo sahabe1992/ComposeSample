@@ -8,8 +8,8 @@
 import Foundation
 import ComposableArchitecture
 struct HomeViewEnvironment {
-    var getLandingData : ()-> Effect<LandingPageModel,ProviderError>
-//    var getComponentData : (String,String)-> Effect<LandingComponent,ProviderError>
+    var getLandingData : ()-> Effect<[LandingModelComponent],ProviderError>
+    var getComponentData : (LazyComponent)-> Effect<MyComponent,ProviderError>
     var mainQueue: AnySchedulerOf<DispatchQueue>
 //    var UpdateBookmark : (_ body: [String:Any]) -> Effect<Bool, Never>
 

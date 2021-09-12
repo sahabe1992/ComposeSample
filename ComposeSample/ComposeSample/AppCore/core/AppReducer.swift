@@ -13,7 +13,7 @@ let appRedducer : Reducer<AppState, AppAction, AppEnvironment> = .combine(
         state: \.home,
         action: /AppAction.home,
         environment:  { environment in
-            HomeViewEnvironment(getLandingData: environment.getLandingData, mainQueue: .main)
+            HomeViewEnvironment(getLandingData: environment.getLandingData, getComponentData: environment.getComponentData, mainQueue: .main)
         }
     ),
     SectionsViewReducer.pullback(
@@ -46,33 +46,34 @@ let appRedducer : Reducer<AppState, AppAction, AppEnvironment> = .combine(
             .receive(on: env.mainQueue)
             .catchToEffect({
                 result in
-                
                 AppAction.landingPageFetched(
-                    try! result.get().result.layout.components.filter({$0.type != "ad_display"})
+                    try! result.get().filter({$0.type != "ad_display"})
                 )
             })
         case .landingPageFetched(let landinngComponents):
             print(landinngComponents)
-            state.loadingState = LoadingState.loaded(HomeViewState())
-            state.compoenents =  landinngComponents
-            return .init(value: .fetchComponentDetail)
-        case .fetchComponentDetail:
-            if let component = state.compoenents.first {
-                return env
-                    .getComponentData(component.uuid, component.viewMode)
-                    .receive(on: env.mainQueue)
-                    .catchToEffect()
-                    .map(AppAction.fetchComponent)
+            let c :[LazyComponent] = landinngComponents.map { model in
+                LazyComponent(uuid: model.uuid, viewMode: model.viewMode, type: model.viewComponnentTypeType)
             }
-            
-            
+            state.loadingState = LoadingState.NotLoaded(HomeViewState.init(homeScreenData: HomeScreenData(loadedComps: [], lazyComps: LazyComponentHolder.init(lazyComponents: c))))
+            return .init(value: .fetchComponentDetail(c.first!, c))
+        case .fetchComponentDetail(let lazyComponent, let list):
+            return env
+                .getComponentData(lazyComponent)
+                .receive(on: env.mainQueue)
+                .catchToEffect({
+                    result in
+                    AppAction.firstComponentFetched(
+                        try! result.get(),list
+                    )
+                })
+            case .firstComponentFetched(let data, var lazyList):
+                var lazitems = lazyList
+                lazitems.removeFirst()
+                state.loadingState = LoadingState.loaded(HomeViewState.init(homeScreenData: HomeScreenData.init(loadedComps: [data], lazyComps: LazyComponentHolder.init(lazyComponents: lazitems))))
             return .none
-        case .fetchComponent(.success(let data)):
-            state.compoenents.removeFirst()
-            return state.compoenents.count > 0 ? .init(value: .fetchComponentDetail) : .none
-        case .fetchComponent(.failure(let error)):
-            state.compoenents.removeFirst()
-            return state.compoenents.count > 0 ? .init(value: .fetchComponentDetail) : .none
         default: return .none
         }
     })
+
+

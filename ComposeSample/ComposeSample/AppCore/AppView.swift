@@ -61,6 +61,8 @@ struct AppView: View {
                 }
 
             }.onAppear{
+                UITableView.appearance().allowsSelection = false
+                UITableViewCell.appearance().selectionStyle = .none
                 UITabBar.appearance().barTintColor = UIColor(Color.appRed)
                 UITabBar.appearance().isTranslucent = false
                 UINavigationBar.appearance().barTintColor = .white

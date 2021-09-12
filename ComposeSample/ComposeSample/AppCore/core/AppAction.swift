@@ -17,6 +17,7 @@ enum AppAction {
     case getLandingPage
     case landingPageFetched([LandingModelComponent])
     case fetchComponent(Result<LandingComponent,ProviderError>)
-    case fetchComponentDetail
+    case fetchComponentDetail(LazyComponent,[LazyComponent])
+    case firstComponentFetched(MyComponent,[LazyComponent])
     
 }

@@ -9,6 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 struct HomeViewState: Equatable {
+    var homeScreenData: HomeScreenData
 }
 
 

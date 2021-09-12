@@ -14,6 +14,8 @@ struct AppState: Equatable {
             switch loadingState {
             case .loaded(let commentsState):
                 return commentsState
+                case .NotLoaded(let value):
+                return value
             default:
                 return nil
             }
@@ -21,15 +23,13 @@ struct AppState: Equatable {
         
         set {
             if (newValue == nil){
-                loadingState = .NotLoaded
+                loadingState = .Loading
             } else {
                 loadingState = .loaded(newValue!)
             }
         }
-        
+
     }
-    var compoenents: [LandingModelComponent] = []
-    
     
     var sections: SectionsViewState
     var bookmark: BookmarkViewState

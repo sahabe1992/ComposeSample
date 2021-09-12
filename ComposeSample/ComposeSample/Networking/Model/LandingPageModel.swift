@@ -35,7 +35,7 @@ struct LandingPageData: Codable, Equatable {
    
 
  enum LoadingState<Content> {
-  case NotLoaded
+  case NotLoaded(Content)
   case Loading
   case loaded(Content)
 }

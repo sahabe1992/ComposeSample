@@ -12,7 +12,7 @@ import ComposableArchitecture
 
 let CardTopViewReducer = Reducer<CardTopViewState, CardTopViewAction, CardTopViewEnvironment >.combine(
     AuthorBookmarkShareReducer.pullback(
-        state: \CardTopViewState.authorBookmarkShareState!,
+        state: \CardTopViewState.authorBookmarkShareState,
         action: /CardTopViewAction.bookMarkShareActions,
         environment:  { environment in
             AuthorTimeBookmarkEnviornment(UpdateBookmark: environment.UpdateBookmark, mainQueue: .main)

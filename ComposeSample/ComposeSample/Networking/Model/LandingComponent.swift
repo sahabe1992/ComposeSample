@@ -15,7 +15,7 @@ struct LandingComponent: Codable, Equatable {
 
 // MARK: - Result
 struct ComponentResult: Codable , Equatable {
-    let data :[ComponentData]?
+    let data :[Article]?
     let id, uuid, type, title: String
     let view_more_title : String?
     let field_sub_description ,title_url: String?
@@ -29,17 +29,51 @@ struct ComponentResult: Codable , Equatable {
     let placeholder: String?
     let sub_description: String?
 }
-struct ComponentData: Codable , Equatable {
-    
-    let type, title_url, absolute_url,image_url,description,duration,release_date: String?
+struct Article: Codable , Equatable {
+    let title_url, absolute_url,image_url,description,duration,release_date: String?
     let author_detail : AuthorDetail?
-    let uuid, nid: String
+    let uuid, nid, type: String
     var  title: String
+    let video: Video?
+    let show_as_web_view: Bool
     
+    var contentType: ArticleType {
+        if let type = detecTypeFrom(type) {
+            return type
+        }
+        return .article
+    }
     
+    func detecTypeFrom(_ name: String) -> ArticleType? {
+        switch name.lowercased() {
+            case "article": return .article
+            case "video": return .video
+                
+            default:
+                return .article
+        }
+    }
 }
 
 
 struct AuthorDetail : Codable , Equatable{
     let name, image_url,url :String?
 }
+
+
+struct Video: Codable, Equatable {
+    let media_id:String
+    let video_id: String
+    let duration: String
+    let account_id: String
+    let player: String
+    let caption: String
+    let start_time: String?
+    let end_time: String?
+    let check_recurring: Bool
+    let show_countdown: Bool
+    let show_background_image: Bool
+    let video_url_mp4:String
+}
+
+

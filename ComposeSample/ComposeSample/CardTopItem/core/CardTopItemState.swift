@@ -14,5 +14,5 @@ struct CardTopViewState: Equatable,Identifiable {
     var brief : String
     var overlayText : String
     var type : ArticleType
-    var authorBookmarkShareState : AuthorTimeBookmarkState?
+    var authorBookmarkShareState : AuthorTimeBookmarkState
 }

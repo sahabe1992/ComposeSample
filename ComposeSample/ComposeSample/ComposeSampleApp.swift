@@ -12,7 +12,7 @@ struct ComposeSampleApp: App {
     let dataManager = DataManager()
     var body: some Scene {
         WindowGroup {
-            AppView(store: Store(initialState: AppState(loadingState: LoadingState.Loading, sections: SectionsViewState(title: "Section"), bookmark: BookmarkViewState(title: "Bookmark"), profile: ProfileViewState(title: "Profile")), reducer: appRedducer, environment: AppEnvironment(getLandingData: dataManager.landingRepo.getAll, getComponentData: dataManager.landingRepo.getComponentData(id:viewMode:), mainQueue: .main)), currentTab: .home)
+            AppView(store: Store(initialState: AppState(loadingState: LoadingState.Loading, sections: SectionsViewState(title: "Section"), bookmark: BookmarkViewState(title: "Bookmark"), profile: ProfileViewState(title: "Profile")), reducer: appRedducer, environment: AppEnvironment(getLandingData: dataManager.landingRepo.getAll, getComponentData: dataManager.landingRepo.getComponentData(lazyCompo:), mainQueue: .main)), currentTab: .home)
         
     }
 }

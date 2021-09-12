@@ -7,5 +7,8 @@
 
 import Foundation
 enum HomeViewAction {
+    case homepageMiddleNineStoriesAndFivePicsActions(HomepageMiddleNineStoriesAndFivePicsAction)
+    case homePageSpotlightActions(SpotlightAction)
+    case LoadNext
+    case NextComponentLoaded(MyComponent)
 }
-

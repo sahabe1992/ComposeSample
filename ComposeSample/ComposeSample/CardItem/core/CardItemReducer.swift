@@ -19,5 +19,16 @@ let CardItemReducer : Reducer<CardItemState, CardItemViewAction, CardItemViewEnv
     .init
     {
     state, action, env in
+        switch action {
+            case .bookMarkShareActions(let action):
+                switch action {
+                    case .bookMarkClicked(id: let id, isBookMarked: let stat):
+                        print("Bookamrk")
+                    default:
+                        break
+                }
+            case .onTapCardItem(id: let id, type: let type):
+                print("onItemtap")
+        }
         return .none
 })

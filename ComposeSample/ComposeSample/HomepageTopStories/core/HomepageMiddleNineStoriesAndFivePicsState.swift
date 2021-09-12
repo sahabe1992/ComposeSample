@@ -7,8 +7,9 @@
 
 import Foundation
 import ComposableArchitecture
-struct HomepageMiddleNineStoriesAndFivePicsState: Equatable {
+struct HomepageMiddleNineStoriesAndFivePicsState: Equatable, Identifiable {
+    var id:String
     var topStory : CardTopViewState
-    var storiesWithImage = IdentifiedArrayOf<CardItemState>()
-    var storiesWithoutImage = IdentifiedArrayOf<CardItemState>()
+    var stories = IdentifiedArrayOf<CardItemState>()
+    
 }

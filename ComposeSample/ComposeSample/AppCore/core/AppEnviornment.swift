@@ -9,7 +9,7 @@ import Foundation
 import ComposableArchitecture
 
 struct AppEnvironment {
-    var getLandingData : ()-> Effect<LandingPageModel,ProviderError>
-    var getComponentData : (String, String) -> Effect<LandingComponent, ProviderError>
+    var getLandingData : ()-> Effect<[LandingModelComponent],ProviderError>
+    var getComponentData : (LazyComponent) -> Effect<MyComponent, ProviderError>
     var mainQueue: AnySchedulerOf<DispatchQueue>
 }

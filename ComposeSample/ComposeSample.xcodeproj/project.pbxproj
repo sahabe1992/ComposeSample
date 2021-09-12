@@ -23,7 +23,6 @@
 		9BB1CBD926ECD4A200EA0AB6 /* LandingModelComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CBC926ECD4A200EA0AB6 /* LandingModelComponent.swift */; };
 		9BB1CBDA26ECD4A200EA0AB6 /* LandingPageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CBCA26ECD4A200EA0AB6 /* LandingPageModel.swift */; };
 		9BB1CBDB26ECD4A200EA0AB6 /* LandingComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CBCB26ECD4A200EA0AB6 /* LandingComponent.swift */; };
-		9BB1CBDC26ECD4A200EA0AB6 /* Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CBCC26ECD4A200EA0AB6 /* Landing.swift */; };
 		9BB1CBDD26ECD4A200EA0AB6 /* LandingLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CBCD26ECD4A200EA0AB6 /* LandingLayout.swift */; };
 		9BB1CBDE26ECD4A200EA0AB6 /* LandingPageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CBCE26ECD4A200EA0AB6 /* LandingPageRepository.swift */; };
 		9BB1CBDF26ECD4A200EA0AB6 /* LandingClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CBD026ECD4A200EA0AB6 /* LandingClient.swift */; };
@@ -98,6 +97,13 @@
 		9BB1CC7D26ECD90F00EA0AB6 /* AuthorTimeBookmarkAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CC7826ECD90F00EA0AB6 /* AuthorTimeBookmarkAction.swift */; };
 		9BB1CC8226ECD92600EA0AB6 /* ImageWithOverlayState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CC8026ECD92600EA0AB6 /* ImageWithOverlayState.swift */; };
 		9BB1CC8326ECD92600EA0AB6 /* ImageWithOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CC8126ECD92600EA0AB6 /* ImageWithOverlay.swift */; };
+		9BB1CC8526ECDE9600EA0AB6 /* MyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CC8426ECDE9600EA0AB6 /* MyComponent.swift */; };
+		9BB1CC8726ECE48600EA0AB6 /* HomeScreenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CC8626ECE48600EA0AB6 /* HomeScreenData.swift */; };
+		9BB1CC8926ECE4E500EA0AB6 /* LazyComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CC8826ECE4E500EA0AB6 /* LazyComponent.swift */; };
+		9BB1CC8B26ECE4F500EA0AB6 /* LazyComponentHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CC8A26ECE4F500EA0AB6 /* LazyComponentHolder.swift */; };
+		9BB1CC8D26ECF04D00EA0AB6 /* TopStoriesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CC8C26ECF04D00EA0AB6 /* TopStoriesMapper.swift */; };
+		9BB1CC8F26ECF0A400EA0AB6 /* HomeViewStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CC8E26ECF0A400EA0AB6 /* HomeViewStates.swift */; };
+		9BB1CC9226ECFED400EA0AB6 /* SpotlightMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB1CC9126ECFED400EA0AB6 /* SpotlightMapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,7 +144,6 @@
 		9BB1CBC926ECD4A200EA0AB6 /* LandingModelComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingModelComponent.swift; sourceTree = "<group>"; };
 		9BB1CBCA26ECD4A200EA0AB6 /* LandingPageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageModel.swift; sourceTree = "<group>"; };
 		9BB1CBCB26ECD4A200EA0AB6 /* LandingComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingComponent.swift; sourceTree = "<group>"; };
-		9BB1CBCC26ECD4A200EA0AB6 /* Landing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Landing.swift; sourceTree = "<group>"; };
 		9BB1CBCD26ECD4A200EA0AB6 /* LandingLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingLayout.swift; sourceTree = "<group>"; };
 		9BB1CBCE26ECD4A200EA0AB6 /* LandingPageRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageRepository.swift; sourceTree = "<group>"; };
 		9BB1CBD026ECD4A200EA0AB6 /* LandingClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingClient.swift; sourceTree = "<group>"; };
@@ -213,6 +218,13 @@
 		9BB1CC7826ECD90F00EA0AB6 /* AuthorTimeBookmarkAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorTimeBookmarkAction.swift; sourceTree = "<group>"; };
 		9BB1CC8026ECD92600EA0AB6 /* ImageWithOverlayState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageWithOverlayState.swift; sourceTree = "<group>"; };
 		9BB1CC8126ECD92600EA0AB6 /* ImageWithOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageWithOverlay.swift; sourceTree = "<group>"; };
+		9BB1CC8426ECDE9600EA0AB6 /* MyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyComponent.swift; path = ../../../../../../Applications/MyComponent.swift; sourceTree = "<group>"; };
+		9BB1CC8626ECE48600EA0AB6 /* HomeScreenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenData.swift; sourceTree = "<group>"; };
+		9BB1CC8826ECE4E500EA0AB6 /* LazyComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyComponent.swift; sourceTree = "<group>"; };
+		9BB1CC8A26ECE4F500EA0AB6 /* LazyComponentHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyComponentHolder.swift; sourceTree = "<group>"; };
+		9BB1CC8C26ECF04D00EA0AB6 /* TopStoriesMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStoriesMapper.swift; sourceTree = "<group>"; };
+		9BB1CC8E26ECF0A400EA0AB6 /* HomeViewStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewStates.swift; sourceTree = "<group>"; };
+		9BB1CC9126ECFED400EA0AB6 /* SpotlightMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotlightMapper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -281,6 +293,10 @@
 				9BB1CB9426ECD1A600EA0AB6 /* Assets.xcassets */,
 				9BB1CB9926ECD1A600EA0AB6 /* Info.plist */,
 				9BB1CB9626ECD1A600EA0AB6 /* Preview Content */,
+				9BB1CC8426ECDE9600EA0AB6 /* MyComponent.swift */,
+				9BB1CC8826ECE4E500EA0AB6 /* LazyComponent.swift */,
+				9BB1CC8A26ECE4F500EA0AB6 /* LazyComponentHolder.swift */,
+				9BB1CC8626ECE48600EA0AB6 /* HomeScreenData.swift */,
 			);
 			path = ComposeSample;
 			sourceTree = "<group>";
@@ -341,7 +357,6 @@
 				9BB1CBC926ECD4A200EA0AB6 /* LandingModelComponent.swift */,
 				9BB1CBCA26ECD4A200EA0AB6 /* LandingPageModel.swift */,
 				9BB1CBCB26ECD4A200EA0AB6 /* LandingComponent.swift */,
-				9BB1CBCC26ECD4A200EA0AB6 /* Landing.swift */,
 				9BB1CBCD26ECD4A200EA0AB6 /* LandingLayout.swift */,
 			);
 			path = Model;
@@ -442,6 +457,8 @@
 				9BB1CC1426ECD53800EA0AB6 /* HomeViewEnvironment.swift */,
 				9BB1CC1526ECD53800EA0AB6 /* HomeViewAction.swift */,
 				9BB1CC1626ECD53800EA0AB6 /* HomeViewReducer.swift */,
+				9BB1CC9026ECF10400EA0AB6 /* Mapper */,
+				9BB1CC8E26ECF0A400EA0AB6 /* HomeViewStates.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -615,6 +632,15 @@
 			path = core;
 			sourceTree = "<group>";
 		};
+		9BB1CC9026ECF10400EA0AB6 /* Mapper */ = {
+			isa = PBXGroup;
+			children = (
+				9BB1CC8C26ECF04D00EA0AB6 /* TopStoriesMapper.swift */,
+				9BB1CC9126ECFED400EA0AB6 /* SpotlightMapper.swift */,
+			);
+			path = Mapper;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -756,6 +782,7 @@
 				9BB1CC3426ECD53800EA0AB6 /* SectionsState.swift in Sources */,
 				9BB1CC0A26ECD4CE00EA0AB6 /* ImageModifier.swift in Sources */,
 				9BB1CC3826ECD53800EA0AB6 /* BookmarkAction.swift in Sources */,
+				9BB1CC8F26ECF0A400EA0AB6 /* HomeViewStates.swift in Sources */,
 				9BB1CBD526ECD4A200EA0AB6 /* Provider+Landing.swift in Sources */,
 				9BB1CC3326ECD53800EA0AB6 /* SectionReducer.swift in Sources */,
 				9BB1CBDE26ECD4A200EA0AB6 /* LandingPageRepository.swift in Sources */,
@@ -772,7 +799,6 @@
 				9BB1CC7B26ECD90F00EA0AB6 /* AuthorTimeBookmarkReducer.swift in Sources */,
 				9BB1CC6F26ECD8FA00EA0AB6 /* CardItemReducer.swift in Sources */,
 				9BB1CC7126ECD8FA00EA0AB6 /* CardItemState.swift in Sources */,
-				9BB1CBDC26ECD4A200EA0AB6 /* Landing.swift in Sources */,
 				9BB1CC6E26ECD8FA00EA0AB6 /* CardItemEnviornment.swift in Sources */,
 				9BB1CBF626ECD4C200EA0AB6 /* String+Ext.swift in Sources */,
 				9BB1CC7D26ECD90F00EA0AB6 /* AuthorTimeBookmarkAction.swift in Sources */,
@@ -782,6 +808,7 @@
 				9BB1CBDA26ECD4A200EA0AB6 /* LandingPageModel.swift in Sources */,
 				9BB1CC5926ECD83100EA0AB6 /* HomepageMiddleNineStoriesAndFivePics.swift in Sources */,
 				9BB1CBD726ECD4A200EA0AB6 /* Provider.swift in Sources */,
+				9BB1CC8526ECDE9600EA0AB6 /* MyComponent.swift in Sources */,
 				9BB1CBE126ECD4A200EA0AB6 /* Router.swift in Sources */,
 				9BB1CC3D26ECD53800EA0AB6 /* ProfileViewAction.swift in Sources */,
 				9BB1CC3126ECD53800EA0AB6 /* HomeView.swift in Sources */,
@@ -792,6 +819,7 @@
 				9BB1CC4B26ECD81C00EA0AB6 /* SpotlightReducer.swift in Sources */,
 				9BB1CBDB26ECD4A200EA0AB6 /* LandingComponent.swift in Sources */,
 				9BB1CC0C26ECD4CE00EA0AB6 /* Utility.swift in Sources */,
+				9BB1CC8926ECE4E500EA0AB6 /* LazyComponent.swift in Sources */,
 				9BB1CBDD26ECD4A200EA0AB6 /* LandingLayout.swift in Sources */,
 				9BB1CBF426ECD4C200EA0AB6 /* Optional+Ext.swift in Sources */,
 				9BB1CC3A26ECD53800EA0AB6 /* BookmarkView.swift in Sources */,
@@ -802,9 +830,11 @@
 				9BB1CC3526ECD53800EA0AB6 /* SectionsAction.swift in Sources */,
 				9BB1CC4D26ECD81C00EA0AB6 /* SpotlightView.swift in Sources */,
 				9BB1CBF826ECD4C200EA0AB6 /* Color+Ext.swift in Sources */,
+				9BB1CC8726ECE48600EA0AB6 /* HomeScreenData.swift in Sources */,
 				9BB1CC0726ECD4CE00EA0AB6 /* PageControl.swift in Sources */,
 				9BB1CBE926ECD4B100EA0AB6 /* AppView.swift in Sources */,
 				9BB1CC0926ECD4CE00EA0AB6 /* Loader.swift in Sources */,
+				9BB1CC8D26ECF04D00EA0AB6 /* TopStoriesMapper.swift in Sources */,
 				9BB1CC7A26ECD90F00EA0AB6 /* AuthorTimeBookmarkState.swift in Sources */,
 				9BB1CC5826ECD83100EA0AB6 /* HomepageMiddleNineStoriesAndFivePicsState.swift in Sources */,
 				9BB1CC4C26ECD81C00EA0AB6 /* SpotlightAction.swift in Sources */,
@@ -837,6 +867,8 @@
 				9BB1CC5526ECD83100EA0AB6 /* HomepageMiddleNineStoriesAndFivePicsAction.swift in Sources */,
 				9BB1CC0526ECD4CE00EA0AB6 /* Constants.swift in Sources */,
 				9BB1CC4026ECD53800EA0AB6 /* ProfileViewState.swift in Sources */,
+				9BB1CC8B26ECE4F500EA0AB6 /* LazyComponentHolder.swift in Sources */,
+				9BB1CC9226ECFED400EA0AB6 /* SpotlightMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

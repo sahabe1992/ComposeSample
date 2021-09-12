@@ -6,13 +6,13 @@
 //
 
 import Foundation
-struct SpotlightState: Equatable {
+struct SpotlightState: Equatable, Identifiable {
+    var id: Int
     var imageMediaMobile : String
-    var viewMoreUrl: String = ""
-    var viewMoreUrlFieldId: String? = ""
-    var viewMoreUrlFieldType: String? = ""
     var isWebViewPresented: Bool = false
+    var cta: CTAData
     var spotlightNavigation: SpotlightNavigation
     
     
 }
+

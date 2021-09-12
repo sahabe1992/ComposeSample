@@ -20,7 +20,7 @@ struct SpotlightView: View {
                 .aspectRatio(contentMode: .fit)
                 .frame(width: UIScreen.main.bounds.width-30)
                 .onTapGesture {
-                    viewStore.send(.onTap(!viewStore.viewMoreUrlFieldId.isNilOrEmpty))
+                    viewStore.send(.onTap(false))
                 }
             } .frame(width: UIScreen.main.bounds.width-30)
         }

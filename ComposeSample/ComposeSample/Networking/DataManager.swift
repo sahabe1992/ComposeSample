@@ -11,4 +11,5 @@ class DataManager {
     init( landingPageRepository: LandingPageRepository = LandingPageRepository()) {
         self.landingRepo = landingPageRepository
     }
+    
 }
