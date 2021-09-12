@@ -40,37 +40,7 @@ struct LandingModelComponent: Codable, Equatable {
         return .other
     }
     
-    func detectViewModeTypeFrom(_ name: String) -> ViewModeType? {
-        switch name.lowercased() {
-        case "middle_9s_5p": return .middle9s5p
-        case "full": return .full
-        case "left_7s_5p": return .left7s5p
-        case "minute_full_width": return .minuteFullWidth
-        case "numbered_carousel": return .numberedCarousel
-        case "a_middle_8s_6p": return .aMiddle8s6p
-        case "listing_4s_4p": return .listing4s4p
-        case "large_tiles_2s_2p": return .largeTiles2s2p
-        case "carousel": return .carousel
-        case "carousel_journalists_full": return .carouselJournalistsFull
-        case "featured_video_left_5s_5p": return .featuredVideoLeft5s5p
-        case "a_left_5s_5p": return .aLeft5s5p
-        case "carousel_without_numbers_full_width" : return .carouselWithoutNumbersFullWidth
-        case "default": return .default
-        default:
-            return .other
-        }
-    }
-    func detectTypeFrom(_ name: String) -> ComponentType? {
-        switch name.lowercased() {
-        case "dynamic_listing": return .dynamicListing
-        case "interactive": return .interactive
-        case "spotlight": return .spotlight
-        case "cia_widget": return .ciaWidget
-        case "subscription": return .subscription
-        default:
-            return .other
-        }
-    }
+
 }
 
 enum ViewModeType: String {
@@ -98,4 +68,38 @@ enum ComponentType: String {
     case ciaWidget
     case subscription
     case other
+}
+
+func detectViewModeTypeFrom(_ name: String) -> ViewModeType? {
+    switch name.lowercased() {
+    case "middle_9s_5p": return .middle9s5p
+    case "full": return .full
+    case "left_7s_5p": return .left7s5p
+    case "minute_full_width": return .minuteFullWidth
+    case "numbered_carousel": return .numberedCarousel
+    case "a_middle_8s_6p": return .aMiddle8s6p
+    case "listing_4s_4p": return .listing4s4p
+    case "large_tiles_2s_2p": return .largeTiles2s2p
+    case "carousel": return .carousel
+    case "carousel_journalists_full": return .carouselJournalistsFull
+    case "featured_video_left_5s_5p": return .featuredVideoLeft5s5p
+    case "a_left_5s_5p": return .aLeft5s5p
+    case "carousel_without_numbers_full_width" : return .carouselWithoutNumbersFullWidth
+    case "default": return .default
+    default:
+        return .other
+    }
+}
+
+
+func detectTypeFrom(_ name: String) -> ComponentType? {
+    switch name.lowercased() {
+    case "dynamic_listing": return .dynamicListing
+    case "interactive": return .interactive
+    case "spotlight": return .spotlight
+    case "cia_widget": return .ciaWidget
+    case "subscription": return .subscription
+    default:
+        return .other
+    }
 }

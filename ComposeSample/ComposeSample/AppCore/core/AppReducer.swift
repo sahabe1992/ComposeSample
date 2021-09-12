@@ -53,7 +53,7 @@ let appRedducer : Reducer<AppState, AppAction, AppEnvironment> = .combine(
         case .landingPageFetched(let landinngComponents):
             print(landinngComponents)
             let c :[LazyComponent] = landinngComponents.map { model in
-                LazyComponent(uuid: model.uuid, viewMode: model.viewMode, type: model.viewComponnentTypeType)
+                LazyComponent(uuid: model.uuid, viewMode: model.viewModeType, type: model.viewComponnentTypeType, vMode: model.viewMode)
             }
             state.loadingState = LoadingState.NotLoaded(HomeViewState.init(homeScreenData: HomeScreenData(loadedComps: [], lazyComps: LazyComponentHolder.init(lazyComponents: c))))
             return .init(value: .fetchComponentDetail(c.first!, c))

@@ -8,6 +8,8 @@
 import Foundation
 struct LazyComponent: Equatable{
     var uuid:String
-    var viewMode:String
+    var viewMode:ViewModeType
     var type:ComponentType
+    var vMode: String
+    
 }

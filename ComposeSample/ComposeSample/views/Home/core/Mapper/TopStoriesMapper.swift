@@ -13,7 +13,8 @@ func topStoriesMapper(homeScreenComponent: MyComponent) -> HomepageMiddleNineSto
             if components.count > 0, let firstItem = components.first {
                 let topItem = CardTopViewState(id: firstItem.nid.toInt() , imageURL: firstItem.image_url ?? "", title: firstItem.title, brief: firstItem.description ?? "", overlayText: firstItem.title, type: .article, authorBookmarkShareState: getAuthor(firstItem: firstItem))
                 components.removeFirst()
-                let top = HomepageMiddleNineStoriesAndFivePicsState(id: uuis, topStory: topItem, stories: mapItemsToState(items: components))
+              let com =  Array(components.prefix(8))
+                let top = HomepageMiddleNineStoriesAndFivePicsState(id: uuis, topStory: topItem, stories: mapItemsToState(items: com, storyCounr: StoryCount.middle9s5p(8, 4)))
                 return top
             }
             
@@ -25,13 +26,21 @@ func topStoriesMapper(homeScreenComponent: MyComponent) -> HomepageMiddleNineSto
 }
 
 
-func mapItemsToState(items: [Article])-> IdentifiedArrayOf<CardItemState> {
+func mapItemsToState(items: [Article], storyCounr: StoryCount)-> IdentifiedArrayOf<CardItemState> {
     let cardItems = IdentifiedArrayOf<CardItemState>(
-        uniqueElements: items.map {
-            CardItemState(id: $0.nid.toInt(), imageUrl: $0.image_url ?? "", imageItemState: ImageItemState.NoImage, title: $0.title, description: $0.description ?? "", type: $0.contentType, isDividerShow: true, authorBookmarkShareState: getAuthor(firstItem: $0))
+        uniqueElements: items.enumerated().map { (index, item) in
+            CardItemState(id: item.nid.toInt(), imageUrl: item.image_url ?? "", imageItemState: withOrWithoutImage(index: index, url: item.image_url.or("")), title: item.title, description: item.description ?? "", type: item.contentType, isDividerShow: true, authorBookmarkShareState: getAuthor(firstItem: item))
         }
     )
     return cardItems
+}
+func withOrWithoutImage(index:Int, url: String) -> ImageItemState{
+    switch index {
+        case 0...3:
+            return ImageItemState.Image(url)
+        default:
+            return ImageItemState.NoImage
+    }
 }
 
 
@@ -47,4 +56,10 @@ func getAuthor(firstItem: Article) -> AuthorTimeBookmarkState {
         author.type = .video
     }
     return author
+}
+
+
+
+enum StoryCount {
+    case middle9s5p(Int,Int)
 }
